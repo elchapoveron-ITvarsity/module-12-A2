@@ -1,0 +1,77 @@
+.container-fluid {
+    padding: 0px;
+}
+
+.container-fluid .container-fluid .display-4 {
+    background-color:orange;
+    margin: auto;
+    color: white;
+    padding: 1.2rem;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+span {
+    color: red;
+}
+
+.container-fluid .row .col-sm-4 {
+    background-color: white;
+    margin: 14px 29px;
+}
+
+.container-fluid .row .col-sm-7 {
+    background-color: white;
+    display: none;
+    border: 2px solid #000000;
+    margin: 27px;
+    padding: 48px 35px;
+}
+
+h6 {
+    margin: 1% auto 4% 1%;
+}
+
+.container-fluid .row button {
+    background-color: green;
+    float: right;
+}
+
+.container-fluid .row textarea {
+    resize: none;
+}
+
+.container-fluid .row .head {
+    margin: 1%;
+}
+
+.display-all {
+    border: 1px solid #dddddd;
+    background-color: white;
+    padding: 2%;
+    font-family: 'Open Sans', sans-serif;
+    padding: 1px;
+}
+
+.display-details {
+    width: 45%;
+    padding: 3% 1%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h4 {
+    display: inline;
+}
+
+.modify-or-delete {
+    display: inline;
+    float: right;
+    margin: auto 3%;
+}
+
+.edit {
+    height: 19px;
+}
+
+input{
+    border: 5px solid #111111;
+}

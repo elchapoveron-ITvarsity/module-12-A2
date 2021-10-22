@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>API Key</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/custom.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+
+        
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+               
+                <a href=# class="navbar-brand"> <img src="images/logo.png" width="50px"></a>
+                <br/>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <br/><br/><br/><br/>
+
+                <div class="collapse navbar-collapse" id="navbar">
+                    <div class="navbar-nav">
+                        <a href="index.html" class="nav-item nav-link">Home</a>
+               
+                        <a href="add-contact.html" class="nav-item nav-link">Add Contact</a>
+                    </div>
+
+                </div>
+
+            </nav>
+        </header>
+
+        
+            <footer class="container footer-section">
+            <p class="float-right"><a href="#">Back to top</a></p>
+            <p>&copy; 2020-2021 Created with love by Shubnam Pillay, Inc, &middot; <a href="#">Privacy</a> &middot; <a href="#"></a></p>     
+        </footer>   
+        
+        <script>
+            let rootPath = "https://mysite.itvarsity.org/api/ContactBook/";
+            document.getElementById("submitApiKey").addEventListener('click', setApiKey);
+
+            function setApiKey(e){
+                e.preventDefault();
+                
+                apiKey = document.getElementById("apiKey").value;
+                fetch(rootPath + "controller/api-key/?apiKey=" + apiKey)
+                        .then(function (response) {
+                            return response.text();
+                        })
+                        .then(function (data) {
+                            
+                            if (data == "1") {
+                                localStorage.setItem("apiKey", apiKey);
+                                window.open("index.html", "_self");
+                            } else {
+                                alert(data + "Invalid API key entered!");
+                            }
+                        })
+            }
+        </script>
+    </body>
+</html>
